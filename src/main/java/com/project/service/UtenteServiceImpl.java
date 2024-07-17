@@ -47,7 +47,7 @@ public class UtenteServiceImpl implements UtenteService {
 	public Utente getUserByEmail(String email) {
 		Optional<Utente> utenteOptional = utenteDao.findByEmail(email);
 		
-		if(!utenteOptional.isPresent()) {
+		if(utenteOptional.isEmpty()) {
 			return new Utente();
 		}
 		

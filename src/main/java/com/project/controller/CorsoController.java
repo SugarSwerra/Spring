@@ -20,9 +20,8 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-	@JWTTokenNeeded
-	@Path("/course")
-	@Secured(role = "Admin")
+	
+	@Path("/corso")
 	public class CorsoController {
 	
 	@Autowired
@@ -44,6 +43,8 @@ import jakarta.ws.rs.core.Response;
 	  }
 	}
 	
+	@JWTTokenNeeded
+	@Secured(role = "Admin")
 	@POST
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -60,6 +61,8 @@ import jakarta.ws.rs.core.Response;
 	  }
 	}
 	
+	@JWTTokenNeeded
+	@Secured(role = "Admin")
 	@DELETE
 	@Path("/category/{id}")
 	public Response deleteCorsoByCategoia(@PathParam("id") int id) {

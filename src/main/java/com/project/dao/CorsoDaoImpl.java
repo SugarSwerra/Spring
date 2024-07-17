@@ -14,9 +14,11 @@ public class CorsoDaoImpl implements CorsoDaoPersonalizzato {
 	
 	@SuppressWarnings("unchecked")
 	public List<Corso> findCorso(String nome, int idCategoria){
-		String query = "SELECT *"
-					 + "FROM corso"
-					 + "WHERE Nome_Corso LIKE :nome AND FK_CA = :id";
+		String query = """
+                     SELECT *\
+                     FROM corso\
+                     WHERE Nome_Corso LIKE :nome AND FK_CA = :id\
+                     """;
 		
 		return (List<Corso>) entityManager.createQuery(query)
 			    .setParameter("nome", nome)
