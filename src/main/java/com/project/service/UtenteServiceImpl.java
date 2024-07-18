@@ -64,8 +64,6 @@ public class UtenteServiceImpl implements UtenteService {
 			utenteDB.setNome(utenteModificatoDto.getNome());
 			utenteDB.setCognome(utenteModificatoDto.getCognome());
 			utenteDB.setEmail(utenteModificatoDto.getEmail());
-			String sha256hex = DigestUtils.sha256Hex(utenteModificatoDto.getPassword());
-			utenteDB.setPassword(sha256hex);
 			
 			utenteDao.save(utenteDB);
 		}

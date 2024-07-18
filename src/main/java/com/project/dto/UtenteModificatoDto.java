@@ -1,8 +1,6 @@
 package com.project.dto;
 
-import java.util.List;
 
-import com.project.model.Ruolo;
 
 public class UtenteModificatoDto {
 	
@@ -10,8 +8,7 @@ public class UtenteModificatoDto {
 	private String nome;
 	private String cognome;
 	private String email;
-	private String password;
-	private List<Ruolo> roles;
+
 	
 	public int getId() {
 		return id;
@@ -36,18 +33,6 @@ public class UtenteModificatoDto {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public List<Ruolo> getRoles() {
-		return roles;
-	}
-	public void setRoles(List<Ruolo> roles) {
-		this.roles = roles;
 	}
 	
 	

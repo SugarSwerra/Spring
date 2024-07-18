@@ -65,7 +65,7 @@ import jakarta.ws.rs.core.Response;
 	@Secured(role = "Admin")
 	@DELETE
 	@Path("/category/{id}")
-	public Response deleteCorsoByCategoia(@PathParam("id") int id) {
+	public Response deleteCorsoByCategoria(@PathParam("id") int id) {
 	  
 	  try {
 	
